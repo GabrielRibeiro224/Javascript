@@ -4,20 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>To Do List</title>
+    <title>Cards de Jogos</title>
 </head>
 <body>
-    <div class="container">
-        <input class="input-task" placeholder="O que tenho que fazer...">
-        <button class="button-add-task">Adicionar</button>
-
-        <ul class="list-tasks">
-            
-        </ul>
+    <div class="container" id="jogos-container">
+        <!-- <div class="card">
+            <img src="./img/among-us.jpg" alt="">
+            <h3>Among Us</h3>
+        </div> -->
     </div>
+    <script>
+        function carregar() {
+            fetch('jogos.json') /* o fetch buscou a api dos jogos */
+                .then(response => response.json())
+                .then(jogos => {
+                    const container = document.querySelector("#jogos-container")
+
+                    jogos.map(jogo => {
+                        const card = document.createElement("div") /* elemento e classe criadas */
+                        card.classList.add("card")
+
+                        const img = document.createElement("img");
+                        img.src = jogo.imagem
+                        img.alt = jogo.nome
+
+                        const titulo = document.createElement("h3")
+                        titulo.textContent = jogo.nome
+
+                        // chamado do card aos seus filhos
+                        card.appendChild(img)
+                        card.appendChild(titulo)
+                        container.appendChild(card)
+                    })
+                })
+        }
+
+        carregar()
+    </script>
 </body>
-<script src="script.js"></script>
 </html>
