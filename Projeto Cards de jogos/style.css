@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(90deg, #0f172a, #020617);
+}
+
+
+/* div contianer Pai */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(0,0,0,.5), transparent);
+    padding: 16px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 0 0 5px #FFFFFF;
+    transform: scale(1.03);
+}
+
+/* imagens dos cards */
+.card img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* titulo dos cards */
+.card h3 {
+    margin-top: 8px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+}

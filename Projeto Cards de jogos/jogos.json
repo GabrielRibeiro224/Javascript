@@ -1,0 +1,42 @@
+[
+    {
+        "nome": "Battlefield 2042",
+        "imagem": "img/battlefield-2042.jpg"
+    },
+    {
+        "nome": "Minecraft",
+        "imagem": "img/minecraft.jpeg"
+    },
+    {
+        "nome": "Call of Duty Warzone",
+        "imagem": "img/cod-warzone.webp"
+    },
+    {
+        "nome": "Fifa 21",
+        "imagem": "img/fifa-21.jpg"
+    },
+    {
+        "nome": "Fortnite",
+        "imagem": "img/fortnite.webp"
+    },
+    {
+        "nome": "League of Legends",
+        "imagem": "img/league-of-legends.jpg"
+    },
+    {
+        "nome": "Rocket League",
+        "imagem": "img/rocket-league.jpg"
+    },
+    {
+        "nome": "Valorant",
+        "imagem": "img/valorant.webp"
+    },
+    {
+        "nome": "Among US",
+        "imagem": "img/among-us.jpg"
+    },
+    {
+        "nome": "Animal Crossing",
+        "imagem": "img/animal-crossing.webp"
+    }
+]

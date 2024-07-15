@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cards de Jogos</title>
+</head>
+<body>
+    <div class="container" id="jogos-container">
+        <!-- <div class="card">
+            <img src="./img/among-us.jpg" alt="">
+            <h3>Among Us</h3>
+        </div> -->
+    </div>
+    <script>
+        function carregar() {
+            fetch('jogos.json') /* o fetch buscou a api dos jogos */
+                .then(response => response.json())
+                .then(jogos => {
+                    const container = document.querySelector("#jogos-container")
+
+                    jogos.map(jogo => {
+                        const card = document.createElement("div") /* elemento e classe criadas */
+                        card.classList.add("card")
+
+                        const img = document.createElement("img");
+                        img.src = jogo.imagem
+                        img.alt = jogo.nome
+
+                        const titulo = document.createElement("h3")
+                        titulo.textContent = jogo.nome
+
+                        // chamado do card aos seus filhos
+                        card.appendChild(img)
+                        card.appendChild(titulo)
+                        container.appendChild(card)
+                    })
+                })
+        }
+
+        carregar()
+    </script>
+</body>
+</html>
